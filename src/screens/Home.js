@@ -51,7 +51,7 @@ export default function Home({ route }) {
     }
   };
 
-  // delete task from firebase
+  // delete todo from firebase
 
   const deleteTask = (tasks) => {
     tasksRef
