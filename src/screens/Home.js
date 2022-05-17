@@ -5,7 +5,6 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Pressable,
 } from "react-native";
 import { firebase } from "../../config";
 import { FontAwesome } from "@expo/vector-icons";
@@ -88,7 +87,7 @@ export default function Home({ route }) {
         numColumns={1}
         renderItem={({ item }) => (
           <View>
-            <Pressable
+            <TouchableOpacity
               style={styles.containerPrees}
               onPress={() => navigation.navigate("Detail", { item })}
             >
@@ -104,7 +103,7 @@ export default function Home({ route }) {
                   {item.heading[0].toUpperCase() + item.heading.slice(1)}
                 </Text>
               </View>
-            </Pressable>
+            </TouchableOpacity>
           </View>
         )}
       />

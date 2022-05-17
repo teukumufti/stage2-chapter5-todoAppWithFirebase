@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { firebase } from "../../config";
 import { useNavigation } from "@react-navigation/native";
 
@@ -32,14 +38,14 @@ export default function Detail({ route }) {
         value={textHeading}
         placeholder="Update Task"
       />
-      <Pressable
+      <TouchableOpacity
         style={styles.buttonUpdate}
         onPress={() => {
           updateTask();
         }}
       >
         <Text>UPDATE</Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 }
