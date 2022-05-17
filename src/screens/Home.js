@@ -32,21 +32,8 @@ export default function Home({ route }) {
     });
   }, []);
 
-  // delete task from firebase
-
-  const deleteTask = (tasks) => {
-    tasksRef
-      .doc(tasks.id)
-      .delete()
-      .then(() => {
-        alert("Success delete task");
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  };
-
   // add task from firebase
+
   const addTask = () => {
     if (addTasks && addTasks.length > 0) {
       const timestamp = firebase.firestore.FieldValue.serverTimestamp();
@@ -63,6 +50,20 @@ export default function Home({ route }) {
           alert(error);
         });
     }
+  };
+
+  // delete task from firebase
+
+  const deleteTask = (tasks) => {
+    tasksRef
+      .doc(tasks.id)
+      .delete()
+      .then(() => {
+        alert("Success delete task");
+      })
+      .catch((error) => {
+        alert(error);
+      });
   };
 
   return (
