@@ -72,7 +72,7 @@ export default function Home({ route }) {
         <TextInput
           style={styles.textInput}
           placeholder="Add Task's"
-          placeholderTextColor="#FFFF"
+          placeholderTextColor="black"
           onChangeText={(heading) => setAddTasks(heading)}
           value={addTasks}
           underlineColorAndroid="transparent"
